@@ -25,6 +25,6 @@ Key Components of a Database
 
 <b> Naive Implementation using Array of Tuples </b>
 
-This implementation involves the usage of array data structure to implement a database. Each tuple is a row, and the elements of the tuple correspond to the columns. To read the data, it takes 0(n) time as we need to scan through the array. Even update takes O(n) time. Writes are constant time.
+<p> This implementation involves the usage of array data structure to implement a database. Each tuple is a row, and the elements of the tuple correspond to the columns. To read the data, it takes 0(n) time as we need to scan through the array. Even update takes O(n) time. Writes are constant time. </p>
 <ins>Drawbacks: </ins> Not scalable and cannot handle complex relationships
 
