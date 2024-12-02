@@ -4,6 +4,13 @@
 
 A database is an organized collection of data that can be easily accessed, managed, and updated. 
 
+Objective of a Database
+<ul>
+  <li> Provide fast and efficient reads</li>
+  <li> Provide fast writes</li>
+  <li> Persistent and Reliable storage</li>
+</ul>
+
 Key Components of a Database
 <ul>
   <li>Data: Actual information stored in the database</li>
@@ -11,3 +18,13 @@ Key Components of a Database
   <li>Schema: The blueprint or structure of the database</li>
   <li>Query Language: A language used to interact with the database. Eg. SQL</li>
 </ul>
+
+-------------------------------------------------------------------------------------------------------
+
+<h3> Implementations of a Database </h3>
+
+<b> Naive Implementation using Array of Tuples </b>
+
+This implementation involves the usage of array data structure to implement a database. Each tuple is a row, and the elements of the tuple correspond to the columns. To read the data, it takes 0(n) time as we need to scan through the array. Even update takes O(n) time. Writes are constant time.
+<ins>Drawbacks: </ins> Not scalable and cannot handle complex relationships
+
