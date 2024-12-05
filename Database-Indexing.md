@@ -9,5 +9,7 @@ Techniques of Indexing
 
 <h4> Hash Indexes</h4>
 <p>A hash index is a way to locate data in a database quickly by applying a hash function to a key. Maps keys directly to a location in memory or on disk using a hash function.</p>
+
 Use-Case: Used in in-memory databases like Redis/Memcached
+
 Limitations: Not suitable for large amount of data and for range queries as order is not preserved in a Hash based data structure.
