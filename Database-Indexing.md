@@ -1,15 +1,15 @@
-<h3>What is Database indexing ?</h3>
-<p> A database indexing is a technique of creating a shortcut that helps the database find information faster. 
-    Instead of searching through every row in a table, the index points directly to where the data is stored, saving time.</p>
+#Database Indexing
 
-Techniques of Indexing
-1. Hash Indexes
-2. SS Tables and LSM Trees
-3. B-Trees
+Database indexing is a technique used to improve the speed of data retrieval operations on a database table by creating a data structure (called an index) that acts as a shortcut.
 
-<h4> Hash Indexes</h4>
-<p>A hash index is a way to locate data in a database quickly by applying a hash function to a key. Maps keys directly to a location in memory or on disk using a hash function.</p>
+#Types of Indexing
 
-Use-Case: Used in in-memory databases like Redis/Memcached
+1. Hash indexes: Ideal for smaller datasets. Hash-based data structures perform work well in a disk.
+2. SS Tables and LSM Trees: Better for write-heavy workloads. Reads take longer due to scanning of SS tables.
+3. B-Trees: Best for read-heavy workloads.
 
-Limitations: Not suitable for large amount of data and for range queries as order is not preserved in a Hash based data structure.
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+#Hash Indexing
+
+W
