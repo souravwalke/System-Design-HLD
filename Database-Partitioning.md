@@ -8,7 +8,27 @@ As the company grows, the data that it holds also keeps growing. As a result, th
 
 3. Finally, if your data continues to grow beyond what a single server can handle or you want to scale massively, then you can consider **sharding**. Sharding is generally considered a **last-resort scaling solution** because Sharding adds significant complexity to the system.
 
+----------------------------------------------------------------------------------------------------------------------------------
+**What is Database Sharding ?**
+
+Sharding is basically, splitting data into logical partitions across multiple servers to distribute both storage and workload.
 
     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Resources: https://www.youtube.com/watch?v=YCb-tDQWrXk
 
