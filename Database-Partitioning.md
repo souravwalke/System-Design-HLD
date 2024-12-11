@@ -11,9 +11,13 @@ As the company grows, the data that it holds also keeps growing. As a result, th
 ----------------------------------------------------------------------------------------------------------------------------------
 **What is Database Sharding ?**
 
-Sharding is basically, splitting data into logical partitions across multiple servers to distribute both storage and workload.
+Sharding is splitting data into logical partitions across multiple servers to distribute storage and workload.
 
-    
+How is it done?
+
+1. *Key-Based Sharding*: You choose one of the columns in the table as your *shard key*. There is a *hash function* through which this shard key is passed through. The hash function returns the actual node to which this data belongs. This is an effortless way of sharding and effectively distributing the data. But everything depends on the choice of a hash function. A Wrong hash function will lead to unequal distribution. Adding or removing shards is also hard, as the hash function changes, and most data must be redistributed across shards.
+
+2. *Range-Based Sharding*: Data is partitioned based on ranges of values for a particular column, such as timestamp, price, or user_id.
 
 
 
