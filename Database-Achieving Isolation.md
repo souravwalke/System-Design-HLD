@@ -24,4 +24,5 @@ Isolation is implemented using a combination of locking mechanisms, multi-versio
 Two-phase locking is a **protocol** used in databases to **ensure isolation** in transactions. It **guarantees serializability**. It consists of two phases, in the first phase (**growth phase**) the transaction acquires all the locks (shared & exclusive) it needs. Next, in the **shrinking phase**, the transaction starts releasing locks after execution. You can't release any locks in the growth phase and can't acquire any new locks in the shrinking phase. 
 
 **Shared Locks (Read Locks)** - If a transaction only reads data, it uses shared locks.
+
 **Exclusive Locks (Write Locks)** - If a transaction modifies data, it uses exclusive locks.
