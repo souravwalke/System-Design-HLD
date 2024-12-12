@@ -4,5 +4,11 @@
 
 *Anti-entropy (Leaderless Database Replication)*: Anti-entropy is a background process that runs to ensure all nodes in a distributed system have the same data. It detects and resolves any inconsistencies between nodes by comparing their data and synchronizing them. Think of it like a **housekeeping** task.
 
-*Database Transcation*: A transaction in a database is a logical unit of work that consists of one or more operations (e.g., queries, updates, inserts) executed as a single entity
+*Database Transaction*: A transaction in a database is a **logical unit of work** that consists of one or more operations (e.g., queries, updates, inserts) executed as a single entity. Sending money from one account to another is a database transaction.
+
+*ACID Properties*: **Atomicity**: All operations within the transaction are completed, or none are applied (all-or-nothing).
+                   **Consistency**: ensures that a database follows all its rules, constraints, and relationships before and after a transaction.
+                   **Isolation**: Transactions are executed in isolation from one another to avoid conflicts or interference.
+                   **Durability**: Once a transaction is successfully committed, its changes are permanent.
+
 
