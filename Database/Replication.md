@@ -1,6 +1,6 @@
 **Database Replication**
 
-An important concept that answers the question *"How to prevent database failures ?"*. In simple words, it involves creating and maintaining multiple copies (replicas) of your data across different servers or nodes.
+An important concept that answers the question _"How to prevent database failures ?"_. In simple words, it involves creating and maintaining multiple copies (replicas) of your data across different servers or nodes.
 
 1. Single Leader Replication / Master-Slave Architecture
 
