@@ -12,10 +12,19 @@ Underlying Architecture of Relational Databases
 - All reads and writes go to the disk.
 
 --------------------------------------------------------------------------------------------------------------------------
-**What are the shortcomings of relational databases ?**
+**What are the shortcomings of relational databases?**
 
 - Doesn’t scale well horizontally - Sharding a relational database adds overheads on the network making the read/write calls slower.
 - 2PL makes the relational databases slower because locking involves multiple steps which adds latency.
 - B-Trees makes writing slower.
 - Relational databases require a fixed schema. This rigidity made it hard to adapt to dynamic and unstructured data. 
 --------------------------------------------------------------------------------------------------------------------------
+**When are relational databases not suitable to be used?**
+
+- When you have Huge Volumes of Unstructured or Semi-Structured Data. Eg. IoT devices
+- When you have massive scaling needs. Eg. Social media platforms
+- When your systems need to process millions of writes/ reads per second. Eg. Real-time analytics systems
+- When Low latency is the highest priority. Eg. High-Frequency Trading, Gaming, Streaming Applications
+- When schema needs frequent changes.
+
+RDBMS should not be used when your **application demands scalability, flexibility, high throughput, or low latency, or when the data is unstructured or globally distributed**
