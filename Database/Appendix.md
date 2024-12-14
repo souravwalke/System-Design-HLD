@@ -25,5 +25,10 @@
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 
+**Analytical Databases** Analytical databases are specialized for analyzing large datasets and running complex queries. They focus on read-heavy workloads.
+
+**ETL (Extract, Transform, Load)** is the process used to move data from a transactional database (or any other source) to an analytical database for analysis.
+
+
 
 
