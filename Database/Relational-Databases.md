@@ -2,7 +2,7 @@
 
 **What are relational databases ?**
 
-`A relational database is like your strict grandfather:`
+`A relational database is like your strict grandfather. He has High Moral Values (ACID properties), Goes by the Rule Book (Fixed Schema), Slow but Thorough(Latency), and is very reliable.`
 
 
 
