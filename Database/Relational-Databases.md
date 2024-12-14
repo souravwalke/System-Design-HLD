@@ -2,7 +2,7 @@
 
 **What are relational databases ?**
 
-''A relational database is like your strict grandfather:''
+'''A relational database is like your strict grandfather:'''
 
 
 
