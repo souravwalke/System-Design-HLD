@@ -1,13 +1,13 @@
 **Important Concepts**
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 
-*Version Vectors (Multi-leader Replication)*: A version vector is a **data structure** maintained by leader nodes. It **resolves write conflicts** when the independent writes from multiple nodes are propagated to each other. Each node maintains a version vector that indicates the changes it has seen from the other nodes in the network. It helps **establish causal relationships**. When the time comes for eventual consistency, these version vectors are compared. Remember the **Group diary analogy**. Each person will keep a count of the changes they have seen.
+**Version Vectors (Multi-leader Replication)**: A version vector is a **data structure** maintained by leader nodes. It **resolves write conflicts** when the independent writes from multiple nodes are propagated to each other. Each node maintains a version vector that indicates the changes it has seen from the other nodes in the network. It helps **establish causal relationships**. When the time comes for eventual consistency, these version vectors are compared. Remember the **Group diary analogy**. Each person will keep a count of the changes they have seen.
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------
-*Anti-entropy (Leaderless Database Replication)*: Anti-entropy is a background process that runs to ensure all nodes in a distributed system have the same data. It detects and resolves any inconsistencies between nodes by comparing and synchronizing their data. Think of it like a **housekeeping** task.
+**Anti-entropy (Leaderless Database Replication)**: Anti-entropy is a background process that runs to ensure all nodes in a distributed system have the same data. It detects and resolves any inconsistencies between nodes by comparing and synchronizing their data. Think of it like a **housekeeping** task.
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------
-*Database Transaction*: A transaction in a database is a **logical unit of work** that consists of one or more operations (e.g., queries, updates, inserts) executed as a single entity. Sending money from one account to another is a database transaction.
+**Database Transaction**: A transaction in a database is a **logical unit of work** that consists of one or more operations (e.g., queries, updates, inserts) executed as a single entity. Sending money from one account to another is a database transaction.
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 *ACID Properties*: 
@@ -17,18 +17,21 @@
   - **Durability**: Once a transaction is successfully committed, its changes are permanent.
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------
-*Dirty Read*: A dirty read occurs when a transaction reads data that has been modified by another transaction but has not been committed yet.
+**Dirty Read**: A dirty read occurs when a transaction reads data that has been modified by another transaction but has not been committed yet.
 
-*Dirty Write*: Two transactions update the same piece of data simultaneously without knowing about each other's changes.
+**Dirty Write**: Two transactions update the same piece of data simultaneously without knowing about each other's changes.
 
-*Read Skew*: This problem occurs when one transaction is reading through data executing multiple read queries and in between this execution, another transaction updates the data that was read before resulting in inconsistent or incorrect data being used by the first transaction.
+**Read Skew**: This problem occurs when one transaction is reading through data executing multiple read queries and in between this execution, another transaction updates the data that was read before resulting in inconsistent or incorrect data being used by the first transaction.
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------
+**TimeStamp Conflict Resolution**: Timestamps cannot be reliable in resolving conflicts because nodes have independent clocks, and even with synchronization protocols like NTP (Network Time Protocol), there can still be clock skew or drift.
 
-**Analytical Databases** Analytical databases are specialized for analyzing large datasets and running complex queries. They focus on read-heavy workloads.
+---------------------------------------------------------------------------------------------------------------------------------------------------
+**Analytical Databases** Analytical databases analyze large datasets and run complex queries. They focus on read-heavy workloads.
 
-**ETL (Extract, Transform, Load)** is the process used to move data from a transactional database (or any other source) to an analytical database for analysis.
+**ETL (Extract, Transform, Load)** is the process of moving data from a transactional database (or any other source) to an analytical database for analysis.
 
+---------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
