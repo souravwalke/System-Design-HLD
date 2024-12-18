@@ -13,7 +13,7 @@
 *ACID Properties*: 
   - **Atomicity**: All operations within the transaction are completed, or none are applied (all-or-nothing).
   - **Consistency**: ensures that a database follows all its rules, constraints, and relationships before and after a transaction.
-  - **Isolation**: Transactions are executed in isolation to avoid conflicts or interference.
+  - **Isolation**: Transactions are isolated to avoid conflicts or interference.
   - **Durability**: Once a transaction is successfully committed, its changes are permanent.
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------
@@ -32,6 +32,3 @@
 **ETL (Extract, Transform, Load)** is the process of moving data from a transactional database (or any other source) to an analytical database for analysis.
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------
-
-
-
