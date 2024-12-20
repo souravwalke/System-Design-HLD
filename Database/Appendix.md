@@ -32,3 +32,8 @@
 **ETL (Extract, Transform, Load)** is the process of moving data from a transactional database (or any other source) to an analytical database for analysis.
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------
+**Batch Processing** Batch processing is a method of processing large volumes of data in batches. Data is collected over time and processed all at once, often during off-peak hours. Tools used: Hadoop, Apache Spark. Typically used on top of a distributed file system. Useful in Data Warehousing, Payroll systems, etc.
+
+**Stream Processing** is a method of processing data in real-time as it arrives. It works on a continuous stream of incoming data like sensor data, and stock prices.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
