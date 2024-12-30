@@ -17,4 +17,4 @@
  - Data Lakes: Storing raw, semi-structured, or unstructured data for analytics.
  - Log Processing: Handling terabytes of server logs or clickstream data.
 
-```Think of HDFS like a library where instead of storing the entire book in a shelf. The book is broken down into chapters and each chapter is placed in a different shelf.```
+```Think of HDFS as a library where instead of keeping the entire book in one place, the pages are split into chapters and stored across multiple shelves (nodes). There's a librarian (NameNode) who keeps track of where each chapter is stored.```
