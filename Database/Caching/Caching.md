@@ -9,14 +9,13 @@ Caching is a mechanism to store frequently accessed data in memory, making read 
 **What are the tradeoffs of Caching?**
 
 - Caching stores data in memory much faster than disk-based storage.
-- Tradeoff: However, memory is limited and expensive so large amounts of data cannot be stored in a cache and data needs to be selectively added.
+  **Tradeoff:**  However, memory is limited and expensive so large amounts of data cannot be stored in a cache and data needs to be selectively added.
 
 - If the data is already in the cache, it’s super fast to retrieve.
-
-Tradeoff: If the data is not in the cache (a cache miss), it must be fetched from the slower database, which negates the   performance benefit.
+  **Tradeoff:**  If the data is not in the cache (a cache miss), it must be fetched from the slower database, which negates the   performance benefit.
 
 - Caching can reduce the load on the primary database by serving data quickly from the cache.
+  **Tradeoff:** Cached data may become stale if the underlying data in the database changes but the cache isn’t updated immediately.
 
-Tradeoff: However, the data in the cache can become stale if recent changes are not updated to the cache.
-
-- Caching can greatly improve performance for read-heavy applications. But 
+- Caching can greatly improve performance for read-heavy applications.
+  **Tradeoff:** 
