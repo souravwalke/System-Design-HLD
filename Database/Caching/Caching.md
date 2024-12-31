@@ -8,6 +8,8 @@
 
 Caching is a mechanism to store frequently accessed data in memory, making read operations faster by eliminating the need to query the database every time. Keeping data closer to the application in memory reduces the latency associated with fetching data from slower, persistent storage (like a database) and speeds up response times.
 
+Cached information can include the results of database queries, computationally intensive calculations, API requests/responses, and web artifacts such as HTML, JavaScript, and image files.
+
 --------------------------------------------------------------------------------------------------
 
 **What are the tradeoffs of Caching?**
