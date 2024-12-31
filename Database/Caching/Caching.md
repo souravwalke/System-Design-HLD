@@ -2,9 +2,13 @@
 
 ```Think of caching like keeping your favorite snacks on the kitchen counter instead of going to the pantry every time you want one. The kitchen counter (cache) is easily accessible, so you can grab your snack (data) quickly, instead of walking to the pantry (database) and spending time finding it.```
 
+-------------------------------------------------
+
 **What is Caching?**
 
 Caching is a mechanism to store frequently accessed data in memory, making read operations faster by eliminating the need to query the database every time. Keeping data closer to the application in memory reduces the latency associated with fetching data from slower, persistent storage (like a database) and speeds up response times.
+
+-------------------------------------------------
 
 **What are the tradeoffs of Caching?**
 
@@ -18,4 +22,6 @@ Caching is a mechanism to store frequently accessed data in memory, making read 
   **Tradeoff:** Cached data may become stale if the underlying data in the database changes but the cache isn’t updated immediately.
 
 - Caching can greatly improve performance for read-heavy applications.
-  **Tradeoff:** 
+  **Tradeoff:** Implementing cache invalidation and ensuring cache consistency can complicate your system.
+
+-------------------------------------------------
