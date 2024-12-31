@@ -9,8 +9,7 @@ Caching is a mechanism to store frequently accessed data in memory, making read 
 **What are the tradeoffs of Caching?**
 
 - Caching stores data in memory much faster than disk-based storage.
-
-Tradeoff: However, memory is limited and expensive so large amounts of data cannot be stored in a cache and data needs to be selectively added.
+- Tradeoff: However, memory is limited and expensive so large amounts of data cannot be stored in a cache and data needs to be selectively added.
 
 - If the data is already in the cache, it’s super fast to retrieve.
 
