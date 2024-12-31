@@ -10,6 +10,8 @@ Caching is a mechanism to store frequently accessed data in memory, making read 
 
 Cached information can include the results of database queries, computationally intensive calculations, API requests/responses, and web artifacts such as HTML, JavaScript, and image files.
 
+A successful cache results in a **high hit rate** which means the data was present when fetched.
+
 --------------------------------------------------------------------------------------------------
 
 **What are the tradeoffs of Caching?**
@@ -45,3 +47,21 @@ Cache eviction policies determine how to remove data from the cache when it reac
 - Write-Through Cache: Every time you write to the database, the data is also written to the cache at the same time. Cache data is always consistent but increases write latency.
 - Write-Back Cache: Data is first written to the cache, and the cache later asynchronously writes it to the database. Risk of data loss if the cache fails before it writes to the database.
 - Cache Invalidation: When the data in the database changes, you explicitly invalidate or remove the affected cache entries.
+
+--------------------------------------------------------------------------------------------------
+
+**What are the different cache design patterns ?**
+
+*Global Cache*
+
+ - Global cache acts as an **independent component**, decoupled from the application or system logic. The two are loosely coupled and can be scaled independently.
+ - If the application crashes, restarts, or scales (e.g., adding more servers), the cache remains unaffected and operational, serving data to other instances.
+ - The cache can be upgraded, restarted, or scaled without affecting the application.
+ - If one application server or instance fails, other instances can still access the centralized cache without interruption.
+ - With a dedicated caching layer, multiple application servers or services can share the same cache.
+
+*Local Cache*
+
+ - Local cache resides on the same node as the application or systems utilizing it.
+ - When local caches are used, they only benefit the local application consuming the data.
+ - If applications had local, isolated caches, they might become inconsistent when one instance updates data while others are unaware.
