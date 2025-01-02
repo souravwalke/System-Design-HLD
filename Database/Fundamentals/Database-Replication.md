@@ -29,9 +29,10 @@ An important concept that answers the question _"How to prevent database failure
 
 **What is Chain Replication?**
 
-Chain Replication is an approach to replicating data across multiple nodes that involves arranging the nodes in a chain. Chain Replication excels at strong consistency and sequential ordering. 
+Chain Replication is an approach to replicating data across multiple nodes that involves arranging the nodes in a chain. Chain Replication excels at strong consistency, and sequential ordering and is fault tolerant. However, write latency is higher, and a single slow node in the chain slows down the whole replication.
 
 - The chain consists of a head node, multiple replica nodes, and a tail node.
 - All writes by the client are written to the head node, and this data is replicated to the chain of replica nodes and finally reaches the tail node.
 - The tail node acknowledges the write and sends a response which is then propagated through the replica nodes and finally the head. Only then the write is considered successful.
-- All reads are done on the tail node which stores the most up-to-date data. 
+- All reads are done on the tail node which stores the most up-to-date data.
+- If the head node fails, the next node in the chain is promoted to the head node. The same happens with tail node failure.
