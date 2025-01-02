@@ -21,3 +21,9 @@ Redis and Memcached are popular caching technologies or tools that implement cac
 - Redis allows you to periodically save the in-memory data to disk for archiving and recovery purposes.
 
 ------------------------------------------------------------------------------------------------------
+
+**When is it best to use Memcached instead of Redis?**
+
+Choose Memcached when you need a simple, fast, and lightweight cache for transient data or basic key-value storage, especially for read-heavy use cases where persistence and advanced features are unnecessary.
+
+------------------------------------------------------------------------------------------------------
