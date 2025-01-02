@@ -54,4 +54,10 @@ Eg: Row 1: {Name, Age, Address} , Row 2: {Name, Email, LastLogin}
   - The system uses a quorum mechanism (e.g., majority reads/writes) to balance consistency and availability. (Quorum)
   - Partition is done among nodes using consistent hashing.
 
+---------------------------------------------------------------------------------------------------------------------------------------------------
 
+**Search Indexes** are specialized data structures that speed up data retrieval by mapping terms to their occurrences, allowing efficient searches in databases or text collections. 
+
+**Lucene**, a powerful Java-based search library, builds and manages such indexes using an inverted index to map terms to document IDs. It excels at full-text search, handling prefix queries (e.g., app*) efficiently through lexicographical ordering and Finite State Transducers (FSTs).
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
