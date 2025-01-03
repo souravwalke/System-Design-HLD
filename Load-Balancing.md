@@ -31,7 +31,9 @@ The load balancer uses a variety of algorithms and rules to decide which backend
 **How to Avoid Load Balancer as a Single point of failure?**
 
 To avoid a load balancer becoming a single point of failure, you can deploy Multiple Load Balancers (Active-Active or Active-Passive).
+
     - Active-Active Setup: Multiple load balancers are running simultaneously, each distributing traffic. If one fails, the others can continue serving requests.
+    
     - Active-Passive Setup: One load balancer is active, and the other is passive, only becoming active if the primary one fails.
 
 -------------------------------------------------------------------------------------------------------------------------------
