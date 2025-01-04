@@ -10,6 +10,7 @@ MongoDB is a NoSQL database that stores data in a flexible, document-oriented fo
 2. MongoDB **doesn’t** require a **fixed schema**, so fields in documents can vary.
 3. MongoDB is designed for **horizontal scaling**.
 4. Supports powerful querying with filters, projections, aggregations, and indexes.
+5. MongoDB supports quorum reads and writes through the use of read concerns and write concerns. 
 
 -------------------------------------------------------------------------------------------------------------------
 
@@ -34,10 +35,11 @@ In MongoDB, document-style storage means that data is stored as documents, which
 **When should I pick MongoDB over relational databases ?**
 
 You can choose MongoDB:
-    - If your data structure changes often or varies across records.
-    - If you need to handle large volumes of writes and want to scale rapidly.
-    - If you want to avoid complex joins and have most of your data self-contained in a document. 
-    - MongoDB’s schema-less nature is a good fit for agile projects or prototypes.
-    - MongoDB’s support for geospatial indexes makes it ideal for location-based applications.
+    
+- If your data structure changes often or varies across records.
+- If you need to handle large volumes of writes and want to scale rapidly.
+- If you want to avoid complex joins and have most of your data self-contained in a document.
+- MongoDB’s schema-less nature is a good fit for agile projects or prototypes.
+- MongoDB’s support for geospatial indexes makes it ideal for location-based applications.
 
 -------------------------------------------------------------------------------------------------------------------
