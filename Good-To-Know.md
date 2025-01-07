@@ -10,3 +10,6 @@
 Use Case: Real-time data streaming applications, analytics, and event-driven systems.
 
 --------------------------------------------------------------------------------------------------------------------------------------------
+
+**Merkle tree (also called a hash tree)** is a tree-like data structure in which every leaf node contains the hash of a data block, and every non-leaf (parent) node contains the hash of its child nodes. The root of the Merkle tree represents the complete dataset. It's a clever way of detecting differences between large sets of records. 
+
