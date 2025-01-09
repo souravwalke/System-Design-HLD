@@ -7,3 +7,9 @@ Blob storage refers to storing large amounts of unstructured data, such as text,
 Sometimes you'll need to store large, unstructured blobs of data. This could be **images, videos, or other files**. Storing these large blobs in a **traditional database** is **expensive and inefficient** and should be avoided when possible. Instead, you should use a blob storage service like **Amazon S3 or Google Cloud Storage**. 
 
 --------------------------------------------------------------------------------------------------------------------------------------
+
+**How does Blob Storage work?**
+
+Blob storage services are simple. You can upload a blob of data and that data is stored and get back a URL. You can then use this URL to download the blob of data. 
+
+--------------------------------------------------------------------------------------------------------------------------------------
