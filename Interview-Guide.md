@@ -27,3 +27,11 @@
     queries. The two most common in-memory caches are Redis and Memcached.
 
 11. CDN is a type of cache that delivers content to users based on their geographic location. It is typically used to cache static media assets like images and videos. 
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+**Important Facts**
+
+-  Access Time Comparisons: Memory (RAM) < SSD < HDD (Hard Disk)
+-  1 Day = 86400 secs
+-  Maximum Known Capacity: Memory (8TB) < SSD (100 terabytes) < HDD (
