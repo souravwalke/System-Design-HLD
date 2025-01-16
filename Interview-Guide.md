@@ -23,7 +23,7 @@
 9. Distributed locks are perfect for situations where you need to lock something across different systems or processes for a reasonable time. Useful for use cases like ticket booking 
    applications, e-commerce cart checkout, flash sales, and online auctions.
 
-10. One common way to both scale your system and achieve low latency is by using a distributed cache. You'll want to use a cache to save aggregated metrics or speed Up Expensive 
+10. One common way to scale your system and achieve low latency is by using a distributed cache. You'll want to use a cache to save aggregated metrics or speed Up Expensive 
     queries. The two most common in-memory caches are Redis and Memcached.
 
 11. CDN is a type of cache that delivers content to users based on their geographic location. It is typically used to cache static media assets like images and videos. 
@@ -34,4 +34,15 @@
 
 -  Access Time Comparisons: Memory (RAM) < SSD < HDD (Hard Disk)
 -  1 Day = 86400 secs
--  Maximum Known Capacity: Memory (8TB) < SSD (100 terabytes) < HDD (
+-  Maximum Known Capacity: Memory (8TB) < SSD (100 terabytes) < HDD (PB)
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+**Questions to ask about Non-functional requirements**
+
+1. Should I prioritize the consistency of the system over availability? or are there certain aspects of the system where I need to prioritize availability?
+2. What is the number of daily active users (DAU)?
+3. What is the read-to-write ratio of the system?
+4. Are there any scalability trends I need to know?
+5. What should be the latency requirement of the system?
+6. 
