@@ -45,3 +45,15 @@
 3. What is the read-to-write ratio of the system?
 4. Are there any scalability trends I need to know?
 5. What should be the latency requirement of the system?
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+**General Guidelines**
+
+1. Always avoid passing userId or sensitive identifiers in the request body. Use authentication mechanisms like JWT or session cookies to ensure security and minimize the risk of tampering or unauthorized access.
+
+2. While designing APIS, use the following notations in the correct context
+   - GET - Used when it is a request to read from the database and no write is involved.
+   - POST - Used when a request adds data to the database. I am not updating a column but adding a new row.
+   - PUT/PATCH - Used when a request updates an existing row.
+
