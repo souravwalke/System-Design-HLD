@@ -14,7 +14,7 @@
    
 6. You need a load balancer wherever you have multiple machines capable of handling the same request. Add one only to the front of the design as an abstraction.
 
-7. Message Queues (Apache Kafka) serve as buffers for bursty traffic or as a means of distributing work across a system. Queues are suited for asynchronous processing and add latency   
+7. Message Queues (Apache Kafka) serve as buffers for burst traffic or as a means of distributing work across a system. Queues are suited for asynchronous processing and add latency   
    to the system. Hence don't use queues when strong low latency is a requirement.
 
 8. Streams are a continuous flow of data that can be processed and consumed in near real-time. Use streams (Apache Flink/Kafka) when asked to design systems that need real-time 
@@ -45,4 +45,3 @@
 3. What is the read-to-write ratio of the system?
 4. Are there any scalability trends I need to know?
 5. What should be the latency requirement of the system?
-6. 
