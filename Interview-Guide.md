@@ -50,10 +50,24 @@
 
 **General Guidelines**
 
-1. Always avoid passing userId or sensitive identifiers in the request body. Use authentication mechanisms like JWT or session cookies to ensure security and minimize the risk of tampering or unauthorized access.
+1. Always avoid passing user ID or sensitive identifiers in the request body. Use authentication mechanisms like JWT or session cookies to ensure security and minimize the risk of tampering or unauthorized access.
 
 2. While designing APIS, use the following notations in the correct context
-   - GET - Used when it is a request to read from the database and no write is involved.
+   - GET - Used when a request to read from the database and no write is involved.
    - POST - Used when a request adds data to the database. I am not updating a column but adding a new row.
    - PUT/PATCH - Used when a request updates an existing row.
 
+3. There are three ways of reducing latency in any system
+   - Optimizing the database querying and introducing appropriate indexing.
+   - Introducing a Redis cache and caching data whenever possible and reducing disk fetches.
+   - By Processing the tasks asynchronously using a message queue. (Amazon SQS)
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+1. First I would like to establish an agenda for structuring the design interview.
+2. I will initially gather some functional and non-functional requirements for the system we will be designing and agree upon a couple of core functionalities to be implemented.
+3. Ideally candidates do some kind of capacity estimations here but I would like to do these calculations on the fly and as and when it would impact my design choices.
+4. Next I will define the core entities that would be persisted and exchanged in the APIs.
+5. Then I will design the core APIs that will serve as some kind of agreement between the client and server and in a way implement the functional requirements.
+6. Next I would design a high-level design to satisfy the core functional requirements.
+7. We can then discuss parts of the design that would need a deeper dive and discuss any tradeoffs.
