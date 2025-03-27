@@ -1,0 +1,21 @@
+**Design Dropbox / Google Drive-like cloud storage service**
+
+- The user should be able to upload and download from anywhere. Users should be able to share files with other users. Any changes should sync to all devices.
+- Prioritize availability over consistency. Support low-latency uploads and downloads. Support large files upload.
+- **Files, FilesMetadata, and Users** are the main entities involved.
+- Use **DynamoDB** as a database here because file data is loosely structured and not much relational data is present. 
+- We will have **three API's (POST for upload, GET for download and sync, POST for user sharing)**
+- Don't upload files to the backend server and store them in the server's local file system. This is neither scalable nor good for large file uploads.
+- Use blob storage like **AWS S3** to store the files. This is a logical and scalable solution.
+- To upload a file, first make a POST request to the backend server and send the file metadata, store the metadata with a status "uploading", and fetch the pre-signed URL from the blob storage and return to the client (uploader).
+- Uploader can use this **pre-signed URL** that authorizes access to the S3 bucket and upload the file directly to blob storage. Once the upload is complete, S3 will communicate to the backend to change the status to "uploaded".
+- Even downloading works the same way, make a GET request with the fileId. Server will return a pre-signed URL to authorize download directly from S3.
+- Here you can also introduce a **CDN** to make downloads faster. CDN will cache files that are frequently accessed or shared among many people.
+- Now, the file is not uploaded in its entirety. The file is broken down into **chunks** and uploaded in parts. This is known as a **multi-part upload**.
+- This technique is very useful in making uploads faster as each file chunk can be uploaded in parallel.
+- Once the upload of the file is complete, the client sends a **"complete multi-part request"**. S3 then stitches the parts together to form the original file.
+- **Checksum** needs to be calculated for each part and the entire file. Once the file is uploaded and a new checksum is calculated at the blob storage end, then we can find out if any part was missing.
+- In order to share files with other users, you can either store the shared user list within the file metadata table or use a separate table that maps userId with fileId shared to them.
+- Having a separate table is the best option because we can simply query the **SharedFiles table**.
+- Finally, for syncing to work from local to remote. We can have a file system watcher that observes any changes in the local file and queues them up for uploading.
+- Remote devices can either **poll frequently** to the main server or have a **web socket connection** open to get updated about any changes and pull to sync the file locally.
